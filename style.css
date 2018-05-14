@@ -1,0 +1,934 @@
+/*     Body      */
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-size: 62.5%;
+    min-width: 320px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/*     Flex     */
+
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    height: auto;
+    min-height: 1px;
+}
+
+
+/*     Navigation     */
+
+#nav {
+    margin: 0 auto;
+    width: 45%;
+    height: 200px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#project-nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 40%;
+    height: 100px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+
+/*     Logo + Animation     */
+
+#logo {
+    width: auto;
+    height: 50%;
+    min-height: 50%;
+}
+
+#project-nav #logo path {
+    stroke: #ffffff;
+}
+
+#logo-anim {
+    fill: none;
+    stroke: #000000;
+    stroke-miterlimit: 10;
+    stroke-width: 13px;
+    stroke-dasharray: 267px;
+    stroke-dashoffset: 267px;
+    -webkit-animation: dash 3s cubic-bezier(0.5, 0, 0, 1) forwards;
+    animation: dash 3s cubic-bezier(0.5, 0, 0, 1) forwards;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 267px;
+    }
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+/*   IE and EDGE Fix   */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    #logo-anim {
+        stroke-dashoffset: 0px;
+    }
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 0px;
+        }
+        to {
+            stroke-dashoffset: 0px;
+        }
+    }
+}
+
+@supports (-ms-ime-align: auto) {
+    #logo-anim {
+        stroke-dashoffset: 0px;
+    }
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 0px;
+        }
+        to {
+            stroke-dashoffset: 0px;
+        }
+    }
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+
+/*     Home Page     */
+
+#projects {
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: center;
+}
+
+#projects a {
+    width: 45%;
+    height: 22.5%;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.project {
+    width: 100%;
+    height: 0;
+    padding-top: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 47.5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.project:hover h3 {
+    opacity: 1;
+}
+
+.project:hover h4 {
+    opacity: 1;
+}
+
+#interstellar-identity {
+    background-image: url(projects/assets/thumbnails/interstellar-identity.png);
+}
+
+#interstellar-identity:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/interstellar-identity.png);
+}
+
+#produse {
+    background-image: url(projects/assets/thumbnails/produse.png);
+}
+
+#produse:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/produse.png);
+}
+
+#spotify-redesign {
+    background-image: url(projects/assets/thumbnails/spotify-redesign.png);
+}
+
+#spotify-redesign:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/spotify-redesign.png);
+}
+
+#call-of-the-wild {
+    background-image: url(projects/assets/thumbnails/call-of-the-wild.png);
+}
+
+#call-of-the-wild:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/call-of-the-wild.png);
+}
+
+#cobra {
+    background-image: url(projects/assets/thumbnails/cobra.png);
+}
+
+#cobra:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/cobra.png);
+}
+
+#usa-graphic-design {
+    background-image: url(projects/assets/thumbnails/usa-graphic-design.png);
+}
+
+#usa-graphic-design:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/usa-graphic-design.png);
+}
+
+#running-wgtn {
+    background-image: url(projects/assets/thumbnails/running-wgtn.png);
+}
+
+#running-wgtn:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/running-wgtn.png);
+}
+
+#chico-state-alumni {
+    background-image: url(projects/assets/thumbnails/chico-state-alumni.png);
+}
+
+#chico-state-alumni:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/chico-state-alumni.png);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    #interstellar-identity {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/interstellar-identity@2x.png);
+    }
+    #produse {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/produse@2x.png);
+    }
+    #spotify-redesign {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/spotify-redesign@2x.png);
+    }
+    #call-of-the-wild {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/call-of-the-wild@2x.png);
+    }
+    #cobra {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/cobra@2x.png);
+    }
+    #usa-graphic-design {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/usa-graphic-design@2x.png);
+    }
+    #running-wgtn {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/running-wgtn@2x.png);
+    }
+    #chico-state-alumni {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/chico-state-alumni@2x.png);
+    }
+}
+
+
+/*   Footer   */
+
+#footer {
+    width: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 25px auto;
+    text-align: center;
+}
+
+
+/*     Projects     */
+
+.project-page {
+    flex-direction: column;
+}
+
+.project-page p {
+    color: #ffffff;
+}
+
+.project-title {
+    width: 100%;
+    height: 49.5vw;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title-text {
+    width: 50%;
+    margin: 10vw auto;
+    text-align: center;
+}
+
+.scroll-buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+    margin: 5% auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.scroll-button {
+    display: block;
+    width: 25%;
+    align-self: flex-end;
+    text-align: center;
+}
+
+.scroll-icon {
+    display: block;
+    margin: 10% auto;
+}
+
+.back-to-top {
+    width: 20%;
+    height: auto;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.back-to-top > svg {
+    width: 20%;
+    margin: 5% 0;
+}
+
+#interstellar-identity-title {
+    background-image: url(projects/assets/titles/interstellar-identity.png);
+    background-size: 100%;
+    text-shadow: 0 0 10px #000000;
+}
+
+#produse-title {
+    background-image: url(projects/assets/titles/produse.png);
+    background-size: 100%;
+}
+
+#spotify-redesign-title {
+    background-image: url(projects/assets/titles/spotify-redesign.png);
+    background-size: 100%;
+    text-shadow: 0 0 10px #222222;
+}
+
+#call-of-the-wild-title {
+    background-image: url(projects/assets/titles/call-of-the-wild.png);
+    background-size: 100%;
+    text-shadow: 0 0 10px #000000;
+    min-width: 1000px;
+    position: absolute;
+    z-index: -1;
+}
+
+#cobra-title {
+    background-image: url(projects/assets/titles/cobra.png);
+    background-size: 100%;
+}
+
+#cobra-title h1,
+#cobra-title p {
+    color: #000000;
+}
+
+#usa-graphic-design-title {
+    height: 35vw;
+}
+
+#usa-flag {
+    width: auto;
+    height: 100px;
+    margin: 0 auto -50px auto;
+}
+
+#usa-graphic-design-title h1,
+#usa-graphic-design-title p {
+    color: #dd4127;
+}
+
+#running-wgtn-title {
+    background-image: url(projects/assets/titles/running-wgtn.png);
+    background-size: 100%;
+    text-shadow: 0 0 10px #000000;
+}
+
+#chico-state-alumni-title {
+    height: 25vw;
+    min-height: 400px;
+}
+
+#chico-state-alumni-title h1,
+#chico-state-alumni-title p {
+    color: #222222;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    #interstellar-identity-title {
+        background-image: url(projects/assets/titles/interstellar-identity@2x.png);
+    }
+    #produse-title {
+        background-image: url(projects/assets/titles/produse@2x.png);
+    }
+    #call-of-the-wild-title {
+        background-image: url(projects/assets/titles/call-of-the-wild@2x.png);
+    }
+    #cobra-title {
+        background-image: url(projects/assets/titles/cobra@2x.png);
+    }
+    #spotify-redesign-title {
+        background-image: url(projects/assets/titles/spotify-redesign@2x.png);
+    }
+    #running-wgtn-title {
+        background-image: url(projects/assets/titles/running-wgtn@2x.png);
+    }
+}
+
+.project-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px 0 50px 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.project-content a {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.project-content a:visited {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.embedded-project {
+    width: 100%;
+    height: 100%;
+}
+
+.content-1 {
+    flex-direction: column;
+}
+
+.content-2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content-3 {
+    flex-direction: column;
+    width: 33%;
+    text-align: center;
+    align-self: center;
+}
+
+.content-4 {
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.centre-image-full {
+    width: 95%;
+    margin: auto;
+}
+
+.centre-image-large {
+    width: 70%;
+    margin: auto;
+}
+
+.centre-image-medium {
+    width: 50%;
+    margin: auto;
+}
+
+.centre-image-small {
+    width: 35%;
+    margin: auto;
+}
+
+.centre-text {
+    width: 40%;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.small-image {
+    width: 30%;
+    height: 30%;
+    margin: auto;
+}
+
+.small-text {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.process-image,
+.process-text {
+    width: 45%;
+    margin: 0 1%;
+}
+
+.inverted-content {
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#running-wgtn-1 {
+    background: linear-gradient(-10deg, #e64f25 0%, #e64f25 65%, #2c3288 65%, #2c3288 100%);
+}
+
+#running-wgtn-2 {
+    background: linear-gradient(to bottom, #e64f25 0%, #e64f25 5%, #d81d40 40%);
+}
+
+#running-wgtn-3 {
+    background: linear-gradient(10deg, #3c9f48 0%, #3c9f48 65%, #d81d40 65%, #d81d40 100%);
+}
+
+#running-wgtn-4 {
+    background: linear-gradient(to bottom, #3c9f48 0%, #3c9f48 5%, #94692d 40%);
+}
+
+#running-wgtn-5 {
+    background: linear-gradient(-10deg, #2c3288 0%, #2c3288 55%, #94692d 55%, #94692d 100%);
+}
+
+#chico-state-alumni-1 {
+    height: 80vh;
+    min-height: 700px;
+}
+
+#usa-graphic-design-1 {
+    height: 1100px;
+}
+
+
+/*     Contact     */
+
+#contact {
+    flex-wrap: wrap;
+    margin: 15vw auto;
+}
+
+#about-me {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/*     Type     */
+
+@font-face {
+    font-family: "HKGrotesk-Regular";
+    src: url("assets/type/HKGrotesk-Regular.eot");
+    src: url("assets/type/HKGrotesk-Regular.woff"),
+    url("assets/type/HKGrotesk-Regular.woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "HKGrotesk-Bold";
+    src: url("assets/type/HKGrotesk-Bold.eot");
+    src: url("assets/type/HKGrotesk-Bold.woff"),
+    url("assets/type/HKGrotesk-Bold.woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "HKGrotesk-Bold", sans-serif;
+    font-size: 6em;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+h2 a {
+    font-family: "HKGrotesk-Bold", sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+
+#project-nav h2 a {
+    color: #ffffff;
+}
+
+h2 a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-family: "HKGrotesk-Bold", sans-serif;
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0;
+    text-shadow: 0 0 10px #000000;
+    transition: 0.2s ease;
+}
+
+h4 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-top: 5px;
+    color: #ffffff;
+    opacity: 0;
+    text-shadow: 0 0 5px #000000;
+    transition: 0.2s ease;
+}
+
+h5 {
+    font-family: "HKGrotesk-Bold", sans-serif;
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: "Varela Round", sans-serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.6em;
+}
+
+p a {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+p2 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.4em;
+}
+
+i {
+    font-style: italic;
+}
+
+::-moz-selection {
+    color: #ffffff;
+    background-color: #0000ff;
+}
+
+::selection {
+    color: #ffffff;
+    background-color: #0000ff;
+}
+
+
+/*     Responsive     */
+
+@media screen and (max-width: 1400px) {
+
+    /*   Project Content   */
+    .centre-image-medium {
+        width: 55%;
+    }
+    .centre-image-small{
+        width: 40%;
+    }
+    .centre-text {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    /*   Navigation   */
+    #nav {
+        width: 49.5%;
+    }
+    #project-nav {
+        width: 50%;
+    }
+
+    /*   Home Page   */
+    #projects {
+        padding: 0;
+    }
+    #projects a {
+        width: 49%;
+        height: 24.5%;
+        margin: 2px;
+    }
+    
+    /*   Project Titles   */
+    .title-text {
+        width: 60%;
+    }
+
+    /*   Project Content   */
+    .centre-image-large {
+        width: 75%;
+    }
+    .centre-image-medium {
+        width: 60%;
+    }
+    .centre-image-small {
+        width: 45%;
+    }
+    .centre-text {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    /*   Navigation   */
+    #nav {
+        width: 55%;
+        height: 175px;
+    }
+    h2 a {
+        font-size: 2em;
+    }
+
+    /*   Home Page   */
+    #projects a {
+        width: 99%;
+        height: 49.5%;
+        margin: 2px;
+    }
+
+    /*   Project Titles   */
+    .title-text {
+        width: 70%;
+    }
+    h1 {
+        font-size: 5em;
+    }
+    #chico-state-alumni-title {
+        min-height: 250px;
+    }
+    .scroll-buttons {
+        width: 40%;
+    }
+    
+    /*   Project Content   */
+    .centre-image-large {
+        width: 80%;
+    }
+    .centre-image-medium {
+        width: 70%;
+    }
+    .centre-image-small {
+        width: 50%;
+    }
+    .centre-text {
+        width: 70%;
+    }
+    .content-3 {
+        width: 50%;
+    }
+    .process-image {
+        width: 60%;
+        margin: 5% auto 0 auto;
+    }
+    .process-text {
+        width: 70%;
+        margin: 10px auto 5% auto;
+        text-align: center;
+    }
+    .back-to-top > svg {
+        width: 30%;
+    }
+
+    /*   Contact   */
+    #about-me {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    /*   Navigation   */
+    #nav {
+        width: 65%;
+        height: 150px;
+    }
+    h2 a {
+        font-size: 1.8em;
+    }
+    #project-nav {
+        width: 60%;
+        height: 75px;
+    }
+
+    /*   Home Page   */
+    #projects a {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+    }
+    .project {
+        margin: 0;
+    }
+
+    /*   Project Titles   */
+    .title-text {
+        width: 70%;
+    }
+    h1 {
+        font-size: 4em;
+    }
+    p {
+        font-size: 1.4em;
+    }
+    #usa-flag {
+        height: 75px;
+        margin-bottom: -35px;
+    }
+    .scroll-buttons {
+        width: 50%;
+    }
+    
+    /*   Project Content   */
+    .centre-image-large {
+        width: 85%;
+    }
+    .centre-image-medium {
+        width: 80%;
+    }
+    .centre-text {
+        width: 80%;
+    }
+    .content-3 {
+        width: 75%;
+    }
+    .process-image {
+        width: 70%;
+        margin: 5% auto 0 auto;
+    }
+    .process-text {
+        width: 80%;
+        margin: 10px auto 5% auto;
+        text-align: center;
+    }
+    .back-to-top > svg {
+        width: 40%;
+    }
+
+    /*   Contact   */
+    #about-me {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /*   Navigation   */
+    h2 a {
+        font-size: 1.6em;
+    }
+
+    /*   Footer   */
+    #footer {
+        width: 95%;
+    }
+    
+    /*   Project Titles   */
+    .title-text {
+        width: 90%;
+    }
+    
+    /*   Project Content   */
+    .centre-image-large {
+        width: 95%;
+    }
+    .centre-image-medium {
+        width: 90%;
+    }
+    .centre-image-small {
+        width: 80%;
+    }
+    .centre-text {
+        width: 90%;
+    }
+    .small-image {
+        width: 40%;
+    }
+    .process-image {
+        width: 80%;
+        margin: 5% auto 0 auto;
+    }
+    .process-text {
+        width: 90%;
+        margin: 10px auto 5% auto;
+        text-align: center;
+    }
+    .back-to-top {
+        width: 30%;
+    }
+
+    /*   Contact   */
+    #contact {
+        margin: 20vw auto;
+    }
+    #about-me {
+        width: 90%;
+    }
+}
+
+@media screen and (hover: none) {
+    h3 {
+        font-size: 2em;
+        opacity: 1;
+    }
+    h4 {
+        font-size: 1em;
+        opacity: 1;
+    }
+    .project:hover h3 {
+        font-size: 2em;
+    }
+    .project:hover h4 {
+        font-size: 1em;
+    }
+    #chico-state-alumni,
+    #usa-graphic-design {
+        display: none;
+    }
+}

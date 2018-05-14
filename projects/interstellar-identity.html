@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interstellar Identity — Joseph Collicoat</title>
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+    <link rel="stylesheet" href="../resetmeyer.css" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+</head>
+
+<body style="background-color:#0a0b14">
+
+    <div class="flex-container project-page">
+        <div class="flex-container" id="project-nav">
+            <h2><a href="../index.html">Work</a></h2>
+            <svg xmlns="http://www.w3.org/2000/svg" class="flex-item" id="logo" viewBox="0 0 103.31 104.49">
+            <path clip-path="url(#logo-clip)" id="logo-anim" d="M47.38,6.5H96.81v27S95.19,58.46,72.1,59.85s-17.09-15-38.57-15-27.25,19.4-27,27.71S13.68,97,30.76,98,58,83.41,58,83.41"/>
+                <defs>
+                    <clipPath id="logo-clip">
+                    <path id="logo-mask" d="M100,2.22H51V11.7H92.49V33.29a21.31,21.31,0,0,1-6.41,15.27,22.07,22.07,0,0,1-30.93,0l-1.62-1.39a31.83,31.83,0,0,0-42.23,2,30.81,30.81,0,0,0,0,43.94,31.81,31.81,0,0,0,44.52,0l1.51-1.49-1.51-1.49-3.77-3.72-1.51-1.49L49,86.43a22.11,22.11,0,0,1-30.94,0,21.42,21.42,0,0,1,0-30.53A22.11,22.11,0,0,1,49,55.9l1.61,1.39a31.75,31.75,0,0,0,42.23-2,30.66,30.66,0,0,0,9.22-22V2.23Z"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            <h2><a href="../contact.html">Contact</a></h2>
+        </div>
+        <div class="flex-container project-title" id="interstellar-identity-title">
+            <div class="title-text">
+                <h1>Interstellar Identity</h1>
+                <p>Humanity is on the brink of a defining stage in its history: colonial expansion into the universe. Cross-medium design can be used to create an identity for humanity in this context, which is practically applicable for understanding by both humans and extra-terrestrial intelligence.</p>
+                <div class="flex-container scroll-buttons">
+                    <a class="flex-item scroll-button" id="scroll-project">
+                        <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151.42 80.71">
+                            <defs><style>.cls-1{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:10px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline class="cls-1" points="5 5 75.71 75.71 146.42 5"/></g></g>
+                        </svg>
+                        <p>Project</p>
+                    </a>
+                    <a class="flex-item scroll-button" id="scroll-process">
+                        <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151.42 110.71">
+                            <defs><style>.cls-1{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:10px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline class="cls-1" points="5 35 75.71 105.71 146.42 35"/><polyline class="cls-1" points="5 5 75.71 75.71 146.42 5"/></g></g>
+                        </svg>
+                        <p>Process</p>
+                    </a>
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        $('#scroll-project').click(function () {
+                            $('html, body').animate ({
+                                scrollTop: $('#interstellar-identity-1').offset().top
+                            }, 1000)
+                        }),
+                        $('#scroll-process').click(function () {
+                            $('html, body').animate ({
+                                scrollTop: $('#interstellar-identity-7').offset().top
+                            }, 1500)
+                        })
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="flex-container project-content content-1" id="interstellar-identity-1">
+            <img class="flex-item centre-image-full" src="assets/content/interstellar-identity-1.svg">
+            <div class="flex-item centre-text">
+                <p2 style="color:#aaaaaa"><i>Above:&nbsp;</i>&nbsp;Complete visual system, depicting our solar system (scaled mathematically) and the molecular composition of each planet's atmosphere.</p2>
+            </div>
+            <div class="flex-item centre-text">
+                <h5>Project Aim</h5>
+                <p>The aim of this project was to create a cross-medium identity for humanity in the context of our impending colonial expansion into the universe. This identity needed to be understandable by both humans and extra-terrestrial intelligence — a task which required accounting for variances in the audience’s ability to receive communication. Thus, a system needed to be developed which allows the identity to be translated across mediums while still retaining its meaning absolutely.</p>
+            </div>
+            <div class="flex-item centre-text">
+                <p2 style="color:#aaaaaa"><i>Below:&nbsp;</i>&nbsp;Isolated audio system, containing information about Earth and our solar system encoded through wavelength and duration of tones.</p2>
+            </div>
+        </div>
+        <div class="flex-container project-content content-1" id="interstellar-identity-2">
+            <audio class="flex-item centre-image-full" controls src="assets/content/interstellar-identity-2.mp3" type="audio/mpeg"></audio>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+            <script src="https://player.vimeo.com/api/player.js"></script>
+            <iframe src="https://player.vimeo.com/video/239615536?loop=1&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:5%;left:2.5%;right:2.5%;width:95%;height:95%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        </div>
+        <div class="flex-container project-content content-1" id="interstellar-identity-3">
+            <img class="flex-item centre-image-small" src="assets/content/interstellar-identity-3.svg">
+            <div class="flex-item centre-text">
+                <h5>Earth</h5>
+                <p>The graphic for Earth is made up of multiple components. Centrally, we have the circle for Earth size relatively to the rest of the system, and in a hexagonal pattern surrounding are the molecules which make up human DNA. Further out there are the molcules for water and oxygen, before finally we have the molecular composition of Earth's atmosphere, which each planet also has included.</p>
+            </div>
+        </div>
+        <div class="flex-container project-content content-1" id="interstellar-identity-4">
+            <div class="flex-item centre-text">
+                <h5>Atoms</h5>
+            </div>
+            <img class="flex-item centre-image-medium" src="assets/content/interstellar-identity-4.svg">
+        </div>
+        <div class="flex-container project-content content-2" id="interstellar-identity-5">
+            <div class="flex-item centre-text" style="width:100%">
+                <h5>The Planets</h5>
+            </div>
+            <div class="flex-container content-3">
+                <img class="flex-item small-image" src="assets/content/interstellar-identity-5.svg">
+                <div class="flex-item small-text">
+                    <p>Mercury</p>
+                    <p2 style="color:#aaaaaa">Atmosphere: 40% Oxygen, 30% Sodium, 10% Helium, 20% Hydrogen.</p2>
+                </div>
+            </div>
+            <div class="flex-container content-3">
+                <img class="flex-item small-image" src="assets/content/interstellar-identity-6.svg">
+                <div class="flex-item small-text">
+                    <p>Venus</p>
+                    <p2 style="color:#aaaaaa">Atmosphere: Carbon Dioxide (CO<sub>2</sub>).</p2>
+                </div>
+            </div>
+            <div class="flex-container content-3">
+                <img class="flex-item small-image" src="assets/content/interstellar-identity-7.svg">
+                <div class="flex-item small-text">
+                    <p>Mars</p>
+                    <p2 style="color:#aaaaaa">Atmosphere: Carbon Dioxide (CO<sub>2</sub>).</p2>
+                </div>
+            </div>
+            <div class="flex-container content-3">
+                <img class="flex-item small-image" src="assets/content/interstellar-identity-8.svg">
+                <div class="flex-item small-text">
+                    <p>Jupiter</p>
+                    <p2 style="color:#aaaaaa">Atmosphere: 90% Hydrogen, 10% He.</p2>
+                </div>
+            </div>
+            <div class="flex-container content-3">
+                <img class="flex-item small-image" src="assets/content/interstellar-identity-9.svg">
+                <div class="flex-item small-text">
+                    <p>Saturn</p>
+                    <p2 style="color:#aaaaaa">Atmosphere: H<sub>2</sub>.</p2>
+                </div>
+            </div>
+            <div class="flex-container content-3">
+                <img class="flex-item small-image" src="assets/content/interstellar-identity-10.svg">
+                <div class="flex-item small-text">
+                    <p>Uranus</p>
+                    <p2 style="color:#aaaaaa">Atmosphere: 75% Hydrogen, 25% Helium.</p2>
+                </div>
+            </div>
+            <div class="flex-container content-3">
+                <img class="flex-item small-image" src="assets/content/interstellar-identity-11.svg">
+                <div class="flex-item small-text">
+                    <p>Neptune</p>
+                    <p2 style="color:#aaaaaa">Atmosphere: 80% Hydrogen, 20% Helium.</p2>
+                </div>
+            </div>
+        </div>
+        <div class="flex-container project-content content-1" id="interstellar-identity-6">
+            <img class="flex-item centre-image-small" src="assets/content/interstellar-identity-12.svg">
+            <div class="flex-item centre-text">
+                <h5>The Sun</h5>
+                <p>The sun is scaled compared to the planets, and contains its atmospheric composition: 75% Hydrogen, 25% Helium.</p>
+            </div>
+        </div>
+        <div class="flex-container project-content content-1" id="interstellar-identity-7">
+            <div class="flex-item centre-text">
+                <p2 style="color:#aaaaaa">Process work for Interstellar Identity.</p2>
+            </div>
+            <div class="flex-container content-4">
+                <div class="flex-container inverted-content">
+                    <img class="flex-item process-image" src="assets/content/interstellar-identity-process-1.png" srcset="assets/content/interstellar-identity-process-1.png 1x, assets/content/interstellar-identity-process-1@2x.png 2x">
+                    <div class="flex-item process-text">
+                        <h5>Research Proposal</h5>
+                        <p>Part one of this project was the research and design proposal. This document contains the research, case studies, theories and early ideas which <i>Interstellar Identity</i> came from.
+                            <br><br>
+                            <a href="assets/documents/interstellar-identity-proposal.pdf" target="_blank">The full research document can be found here.</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-container content-4">
+                <img class="flex-item process-image" src="assets/content/interstellar-identity-process-2.png" srcset="assets/content/interstellar-identity-process-2.png 1x, assets/content/interstellar-identity-process-2@2x.png 2x">
+                <div class="flex-item process-text">
+                    <h5>Early Ideation</h5>
+                    <p>Early development focused on basic symbols, binary and morse code as a visual form of presenting information. I also decided early on that the information would be scientific in nature as this is most likely to be a universal concept.</p>
+                </div>
+            </div>
+            <div class="flex-container content-4">
+                <div class="flex-container inverted-content">
+                    <img class="flex-item process-image" src="assets/content/interstellar-identity-process-3.png" srcset="assets/content/interstellar-identity-process-3.png 1x, assets/content/interstellar-identity-process-3@2x.png 2x">
+                    <div class="flex-item process-text">
+                        <h5>Digital Development</h5>
+                        <p>Using Adobe Illustrator, I began experimenting with icons, visual forms and layouts. It was important to ensure the design was mathematically sound (especially in terms of proportions and sizing), which made for an interesting problem in balancing that with aesthetically pleasing design.</p>
+                    </div>
+                </div>
+                <img class="flex-item centre-image-full" src="assets/content/interstellar-identity-process-4.png" srcset="assets/content/interstellar-identity-process-4.png 1x, assets/content/interstellar-identity-process-4@2x.png 2x">
+            </div>
+            <div class="flex-container content-4">
+                <img class="flex-item process-image" src="assets/content/interstellar-identity-process-5.png" srcset="assets/content/interstellar-identity-process-5.png 1x, assets/content/interstellar-identity-process-5@2x.png 2x">
+                <div class="flex-item process-text">
+                    <h5>Audio Development</h5>
+                    <p>While designing the visual form, I was also working on the audio, using the tone generator in Adobe Audition. I used different wavelengths and lengths of tones as a way to present data in audio form.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex-container project-content content-1" id="interstellar-identity-8">
+            <div class="flex-item centre-text">
+                <h5>Accompanying Report</h5>
+                <p>Alongside the development of the project was a studio report, detailing the process, theory and thinking that went into each and every detail.
+                    <br><br>
+                    <a href="assets/documents/interstellar-identity-report.pdf" target="_blank">The full report can be found here.</a></p>
+            </div>
+            <div class="flex-item back-to-top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151.42 110.71">
+                    <defs><style>.cls-1{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:10px;}</style></defs><title>scroll-up</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline class="cls-1" points="146.42 75.71 75.71 5 5 75.71"/><polyline class="cls-1" points="146.42 105.71 75.71 35 5 105.71"/></g></g>
+                </svg>
+                <p>Back to Top</p>
+            </div>
+            <script>
+                $(document).ready(function() {
+                    $('.back-to-top').click(function() {
+                        $('html, body').animate({
+                            scrollTop: $('#interstellar-identity-title').offset().top
+                        }, 1000)
+                    })
+                });
+            </script>
+        </div>
+    </div>
+    <div id="footer">
+        <p style="color:#ffffff">
+            This website was hand-coded by myself from start to finish :&rpar;
+            <br>
+            Thanks for checking it out!
+        </p>
+    </div>
+
+</body>
+
+</html>
