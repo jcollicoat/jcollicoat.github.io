@@ -270,7 +270,7 @@ function drawDisplay() {
     studyInfo
         .append("image")
         .attr("id", "stustateimg")
-        .attr("xlink:href", "icons/states/california.svg")
+        .attr("xlink:href", "icons/california.svg")
         .attr("x", "32.5%")
         .attr("y", 130)
         .attr("width", 100)
@@ -428,7 +428,7 @@ function drawDisplay() {
 
     workInfo
         .append("image")
-        .attr("xlink:href", "icons/states/california.svg")
+        .attr("xlink:href", "icons/california.svg")
         .attr("id", "worstateimg")
         .attr("x", "32.5%")
         .attr("y", 400)
@@ -1337,7 +1337,7 @@ function updateOutput() {
 
     d3.select("#stustateimg")
         .attr("xlink:href", function (d, i) {
-            return "icons/states/" + stuStateName + ".svg";
+            return "icons/" + stuStateName + ".svg";
         })
 
     //  Graph
@@ -1452,7 +1452,7 @@ function updateOutput() {
 
     d3.select("#worstateimg")
         .attr("xlink:href", function (d, i) {
-            return "icons/states/" + worStateName + ".svg";
+            return "icons/" + worStateName + ".svg";
         })
 
     //  Salary Graph
