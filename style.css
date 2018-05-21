@@ -187,12 +187,12 @@ img {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/call-of-the-wild.png);
 }
 
-#cobra {
-    background-image: url(projects/assets/thumbnails/cobra.png);
+#iconography {
+    background-image: url(projects/assets/thumbnails/iconography.png);
 }
 
-#cobra:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/cobra.png);
+#iconography:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/iconography.png);
 }
 
 #usa-graphic-design {
@@ -232,8 +232,8 @@ img {
     #call-of-the-wild {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/call-of-the-wild@2x.png);
     }
-    #cobra {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/cobra@2x.png);
+    #iconography {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/iconography@2x.png);
     }
     #usa-graphic-design {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/usa-graphic-design@2x.png);
@@ -343,13 +343,12 @@ img {
     z-index: -1;
 }
 
-#cobra-title {
-    background-image: url(projects/assets/titles/cobra.png);
-    background-size: 100%;
+#iconography-title {
+    height: 40vw;
 }
 
-#cobra-title h1,
-#cobra-title p {
+#iconography-title h1,
+#iconography-title p {
     color: #000000;
 }
 
@@ -393,9 +392,6 @@ img {
     }
     #call-of-the-wild-title {
         background-image: url(projects/assets/titles/call-of-the-wild@2x.png);
-    }
-    #cobra-title {
-        background-image: url(projects/assets/titles/cobra@2x.png);
     }
     #spotify-redesign-title {
         background-image: url(projects/assets/titles/spotify-redesign@2x.png);
@@ -453,6 +449,12 @@ img {
     margin: 25px 0;
 }
 
+.content-5 {
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+}
+
 .centre-image-full {
     width: 95%;
     margin: auto;
@@ -483,6 +485,12 @@ img {
     width: 30%;
     height: 30%;
     margin: auto;
+}
+
+.small-image-2 {
+    width: 50%;
+    height: 50%;
+    margin: 20px auto;
 }
 
 .small-text {
