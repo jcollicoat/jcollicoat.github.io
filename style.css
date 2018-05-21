@@ -453,6 +453,12 @@ img {
     margin: 25px 0;
 }
 
+.content-5 {
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+}
+
 .centre-image-full {
     width: 95%;
     margin: auto;
@@ -483,6 +489,12 @@ img {
     width: 30%;
     height: 30%;
     margin: auto;
+}
+
+.small-image-2 {
+    width: 50%;
+    height: 50%;
+    margin: 20px auto;
 }
 
 .small-text {
