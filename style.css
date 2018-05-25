@@ -684,7 +684,7 @@ i {
 }
 
 @media screen and (max-width: 1200px) {
-    
+
     /*   Navigation   */
     #nav {
         width: 49.5%;
@@ -702,7 +702,7 @@ i {
         height: 24.5%;
         margin: 2px;
     }
-    
+
     /*   Project Titles   */
     .title-text {
         width: 60%;
@@ -754,7 +754,7 @@ i {
     .scroll-buttons {
         width: 40%;
     }
-    
+
     /*   Project Content   */
     .centre-image-large {
         width: 80%;
@@ -832,7 +832,7 @@ i {
     .scroll-buttons {
         width: 50%;
     }
-    
+
     /*   Project Content   */
     .centre-image-large {
         width: 85%;
@@ -876,12 +876,12 @@ i {
     #footer {
         width: 95%;
     }
-    
+
     /*   Project Titles   */
     .title-text {
         width: 90%;
     }
-    
+
     /*   Project Content   */
     .centre-image-large {
         width: 95%;
