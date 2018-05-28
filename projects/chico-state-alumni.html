@@ -13,14 +13,22 @@
     <link rel="stylesheet" href="../resetmeyer.css" />
     <link rel="stylesheet" href="../normalize.css" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../animations.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../wow.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 
 </head>
 
 <body style="background-color:#f3f3f3">
+
+    <script>
+        new WOW({
+            offset: 100,
+        }, ).init();
+    </script>
 
     <div class="flex-container project-page">
         <div class="flex-container" id="project-nav">
@@ -36,7 +44,7 @@
             <h2><a style="color:#222222" href="../contact.html">Contact</a></h2>
         </div>
         <div class="flex-container project-title" id="chico-state-alumni-title">
-            <div class="title-text">
+            <div class="title-text wow fade-in">
                 <h1>Chico State Alumni</h1>
                 <p>An interactive interface coded using D3.js which displays data about California State University, Chico design alumni including gender, design discipline, and current location. Have a play with it below!<i> Works best on desktop.</i></p>
             </div>

@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="../resetmeyer.css" />
     <link rel="stylesheet" href="../normalize.css" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../animations.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../wow.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 
@@ -22,13 +24,20 @@
 
 <body style="background-color:#ffffff">
 
+    <script>
+        new WOW({
+            offset: 100,
+        }, ).init();
+    </script>
+
     <style>
-    h5 {
-        color: #37160a;
-    }
-    p {
-        color: #37160a;
-    }
+        h5 {
+            color: #37160a;
+        }
+
+        p {
+            color: #37160a;
+        }
     </style>
 
     <div class="flex-container project-page">
@@ -45,9 +54,10 @@
             <h2><a href="../contact.html">Contact</a></h2>
         </div>
         <div class="flex-container project-title" id="call-of-the-wild-title"></div>
-        <div class="title-text">
+        <div class="title-text wow fade-in">
             <h1>Call of the Wild</h1>
-            <p>Tasked with producing a hand-bound, hard-cover copy of Jack London's <i>Call of the Wild</i>, I used cave drawing illustrations to emphasise themes of primitivism throughout the book. The illustrations mark the beginning of each chapter, and draw attention to a key scene or idea in the story.</p>
+            <p>Tasked with producing a hand-bound, hard-cover copy of Jack London's <i>Call of the Wild</i>, I used cave drawing illustrations to emphasise themes of primitivism throughout the book. The illustrations mark the beginning of each chapter, and
+                draw attention to a key scene or idea in the story.</p>
             <div class="flex-container scroll-buttons">
                 <a class="flex-item scroll-button" id="scroll-project">
                     <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151.42 80.71">
@@ -63,119 +73,118 @@
                 </a>
             </div>
             <script>
-            $(document).ready(function() {
-                $('#scroll-project').click(function() {
-                    $('html, body').animate({
-                        scrollTop: $('#call-of-the-wild-1').offset().top
-                    }, 1000)
-                }),
-                $('#scroll-process').click(function() {
-                    $('html, body').animate({
-                        scrollTop: $('#call-of-the-wild-4').offset().top
-                    }, 1500)
-                })
-            });
-
+                $(document).ready(function() {
+                    $('#scroll-project').click(function() {
+                            $('html, body').animate({
+                                scrollTop: $('#call-of-the-wild-1').offset().top
+                            }, 1000)
+                        }),
+                        $('#scroll-process').click(function() {
+                            $('html, body').animate({
+                                scrollTop: $('#call-of-the-wild-4').offset().top
+                            }, 1500)
+                        })
+                });
             </script>
         </div>
         <div class="flex-container project-content content-1" id="call-of-the-wild-1">
-            <div class="flex-item centre-text">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Chapter Illustrations</h5>
             </div>
-            <img class="flex-item centre-image-large" src="assets/content/call-of-the-wild-1.png" srcset="assets/content/call-of-the-wild-1.png 1x, assets/content/call-of-the-wild-1@2x.png 2x">
-            <div class="flex-item centre-text">
+            <img class="flex-item centre-image-large wow fade-in-up" src="assets/content/call-of-the-wild-1.png" srcset="assets/content/call-of-the-wild-1.png 1x, assets/content/call-of-the-wild-1@2x.png 2x">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Chapter One: Into the Primitive</h5>
                 <p style="color:#37160a"><i>"He had never been struck by a club in his life, and did not understand."</i><br>The book begins with the central character "Buck", a St Bernard and Scotch Shepherd mix, being stolen and thrown into the life of a sled dog in Alaska.</p>
             </div>
             <div class="flex-container content-4">
-                <img class="flex-item process-image" src="assets/content/call-of-the-wild-2.png" srcset="assets/content/call-of-the-wild-2.png 1x, assets/content/call-of-the-wild-2@2x.png 2x">
-                <div class="flex-item process-text">
+                <img class="flex-item process-image wow fade-in-up" src="assets/content/call-of-the-wild-2.png" srcset="assets/content/call-of-the-wild-2.png 1x, assets/content/call-of-the-wild-2@2x.png 2x">
+                <div class="flex-item process-text wow fade-in-up">
                     <h5>Chapter Two: The Law of Club and Fang</h5>
                     <p style="color:#37160a"><i>"Day after day, for days unending, Buck toiled in the traces."</i><br>Buck's journey continues as he begins to learn the harsh ways of life up in the north.</p>
                 </div>
             </div>
-            <img class="flex-item centre-image-large" src="assets/content/call-of-the-wild-3.png" srcset="assets/content/call-of-the-wild-3.png 1x, assets/content/call-of-the-wild-3@2x.png 2x">
-            <div class="flex-item centre-text">
+            <img class="flex-item centre-image-large wow fade-in-up" src="assets/content/call-of-the-wild-3.png" srcset="assets/content/call-of-the-wild-3.png 1x, assets/content/call-of-the-wild-3@2x.png 2x">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Chapter Three: The Dominant Primordial Beast</h5>
                 <p style="color:#37160a"><i>"In a flash, Buck knew it. The time had come. It was to the death."</i><br>A key chapter, Buck kills a rival dog in the pack to become the leader, fully embracing the primal life he has been sent in to.</p>
             </div>
             <div class="flex-container content-4">
                 <div class="flex-container inverted-content">
-                    <img class="flex-item process-image" src="assets/content/call-of-the-wild-4.png" srcset="assets/content/call-of-the-wild-4.png 1x, assets/content/call-of-the-wild-4@2x.png 2x">
-                    <div class="flex-item process-text">
+                    <img class="flex-item process-image wow fade-in-up" src="assets/content/call-of-the-wild-4.png" srcset="assets/content/call-of-the-wild-4.png 1x, assets/content/call-of-the-wild-4@2x.png 2x">
+                    <div class="flex-item process-text wow fade-in-up">
                         <h5>Chapter Four: Who Has Won to Mastership</h5>
                         <p style="color:#37160a"><i>"Every dog knew, what had taken place behind that belt of river trees."</i><br>Buck and the rest of the pack suffer from the loss of many dogs to the harsh Alaskan conditions.</p>
                     </div>
                 </div>
             </div>
-            <img class="flex-item centre-image-large" src="assets/content/call-of-the-wild-5.png" srcset="assets/content/call-of-the-wild-5.png 1x, assets/content/call-of-the-wild-5@2x.png 2x">
-            <div class="flex-item centre-text">
+            <img class="flex-item centre-image-large wow fade-in-up" src="assets/content/call-of-the-wild-5.png" srcset="assets/content/call-of-the-wild-5.png 1x, assets/content/call-of-the-wild-5@2x.png 2x">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Chapter Five: The Toil of Trace and Tail</h5>
                 <p style="color:#37160a"><i>"'You poor devil' said John Thornton. And Buck licked his hand."</i><br>Buck finds his new master in John Thornton, who rescues him from his merciless former owners.</p>
             </div>
             <div class="flex-container content-4">
-                <img class="flex-item process-image" src="assets/content/call-of-the-wild-6.png" srcset="assets/content/call-of-the-wild-6.png 1x, assets/content/call-of-the-wild-6@2x.png 2x">
-                <div class="flex-item process-text">
+                <img class="flex-item process-image wow fade-in-up" src="assets/content/call-of-the-wild-6.png" srcset="assets/content/call-of-the-wild-6.png 1x, assets/content/call-of-the-wild-6@2x.png 2x">
+                <div class="flex-item process-text wow fade-in-up">
                     <h5>Chapter Six: For the Love of a Man</h5>
                     <p style="color:#37160a"><i>"As you love me Buck, as you love me."</i><br>Buck's bond with John Thornton grows stronger as the two face challenges and triumphs together.</p>
                 </div>
             </div>
-            <img class="flex-item centre-image-large" src="assets/content/call-of-the-wild-7.png" srcset="assets/content/call-of-the-wild-7.png 1x, assets/content/call-of-the-wild-7@2x.png 2x">
-            <div class="flex-item centre-text">
+            <img class="flex-item centre-image-large wow fade-in-up" src="assets/content/call-of-the-wild-7.png" srcset="assets/content/call-of-the-wild-7.png 1x, assets/content/call-of-the-wild-7@2x.png 2x">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Chapter Seven: The Sounding of the Call</h5>
                 <p style="color:#37160a"><i>"And it was for his great love of John Thornton that he lost his head."</i><br>After the death of John Thornton, Buck goes on to find a new life where he truly belongs, in the wild with a wolf pack.</p>
             </div>
         </div>
         <div class="flex-container project-content content-1" id="call-of-the-wild-2">
-            <div class="flex-item centre-text">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Typography</h5>
             </div>
-            <img class="flex-item centre-image-large" src="assets/content/call-of-the-wild-8.png" srcset="assets/content/call-of-the-wild-8.png 1x, assets/content/call-of-the-wild-8@2x.png 2x">
-            <div class="flex-item centre-text">
+            <img class="flex-item centre-image-large wow fade-in-up" src="assets/content/call-of-the-wild-8.png" srcset="assets/content/call-of-the-wild-8.png 1x, assets/content/call-of-the-wild-8@2x.png 2x">
+            <div class="flex-item centre-text wow fade-in-up">
                 <p style="color:#37160a">Headings use the typeface Clarendon, chosen for it's slab-serif style and that it was very popular at the time of <i>Call of the Wild's</i> writing.</p>
             </div>
-            <img class="flex-item centre-image-medium" src="assets/content/call-of-the-wild-9.png" srcset="assets/content/call-of-the-wild-9.png 1x, assets/content/call-of-the-wild-9@2x.png 2x">
-            <div class="flex-item centre-text">
+            <img class="flex-item centre-image-medium wow fade-in-up" src="assets/content/call-of-the-wild-9.png" srcset="assets/content/call-of-the-wild-9.png 1x, assets/content/call-of-the-wild-9@2x.png 2x">
+            <div class="flex-item centre-text wow fade-in-up">
                 <p style="color:#37160a">Cheltenham Book was used for the body copy, due to its readable nature and that it was released in the same year as <i>Call of the Wild.</i></p>
             </div>
-            <img class="flex-item centre-image-medium" src="assets/content/call-of-the-wild-10.png" srcset="assets/content/call-of-the-wild-10.png 1x, assets/content/call-of-the-wild-10@2x.png 2x">
+            <img class="flex-item centre-image-medium wow fade-in-up" src="assets/content/call-of-the-wild-10.png" srcset="assets/content/call-of-the-wild-10.png 1x, assets/content/call-of-the-wild-10@2x.png 2x">
         </div>
         <div class="flex-container project-content content-1" id="call-of-the-wild-3">
-            <div class="flex-item centre-text">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Full PDF</h5>
                 <p><a href="assets/documents/call-of-the-wild.pdf" target="_blank" style="color:#37160a">You can view and download the full PDF of my copy of <i>Call of the Wild</i> here!</a></p>
             </div>
         </div>
         <div class="flex-container project-content content-1" id="call-of-the-wild-4">
-            <div class="flex-item centre-text">
+            <div class="flex-item centre-text wow fade-in-up">
                 <p2 style="color:#37160a">Process work for Call of the Wild.</p2>
             </div>
             <div class="flex-container content-4">
-                <img class="flex-item process-image" src="assets/content/call-of-the-wild-process-1.png" srcset="assets/content/call-of-the-wild-process-1.png 1x, assets/content/call-of-the-wild-process-1@2x.png 2x">
-                <div class="flex-item process-text">
+                <img class="flex-item process-image wow fade-in-up" src="assets/content/call-of-the-wild-process-1.png" srcset="assets/content/call-of-the-wild-process-1.png 1x, assets/content/call-of-the-wild-process-1@2x.png 2x">
+                <div class="flex-item process-text wow fade-in-up">
                     <h5>Research</h5>
                     <p style="color:#37160a">The design process began with research on the book and its author Jack London. London's inspiration for the story was his time spent in the Yukon area in the late 1800s, among sled dogs and their owners.</p>
                 </div>
             </div>
             <div class="flex-container content-4">
                 <div class="flex-container inverted-content">
-                    <img class="flex-item process-image" src="assets/content/call-of-the-wild-process-2.png" srcset="assets/content/call-of-the-wild-process-2.png 1x, assets/content/call-of-the-wild-process-2@2x.png 2x">
-                    <div class="flex-item process-text">
+                    <img class="flex-item process-image wow fade-in-up" src="assets/content/call-of-the-wild-process-2.png" srcset="assets/content/call-of-the-wild-process-2.png 1x, assets/content/call-of-the-wild-process-2@2x.png 2x">
+                    <div class="flex-item process-text wow fade-in-up">
                         <h5>Concept Development</h5>
                         <p style="color:#37160a">While I knew I wanted to focus on primitivism in my illustrations, my concepts went through several iterations before settling on the cave drawing style.</p>
                     </div>
                 </div>
             </div>
-            <img class="flex-item centre-image-full" src="assets/content/call-of-the-wild-process-3.png" srcset="assets/content/call-of-the-wild-process-3.png 1x, assets/content/call-of-the-wild-process-3@2x.png 2x" style="width:100%">
-            <div class="flex-item centre-text">
+            <img class="flex-item centre-image-full wow fade-in-up" src="assets/content/call-of-the-wild-process-3.png" srcset="assets/content/call-of-the-wild-process-3.png 1x, assets/content/call-of-the-wild-process-3@2x.png 2x" style="width:100%">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Bookmaking</h5>
                 <p style="color:#37160a">The hand-making process was difficult but very rewarding with a tangible end result!</p>
             </div>
-            <img class="flex-item centre-image-medium" src="assets/content/call-of-the-wild-process-4.png" srcset="assets/content/call-of-the-wild-process-4.png 1x, assets/content/call-of-the-wild-process-4@2x.png 2x" style="margin-top:20px">
-            <img class="flex-item centre-image-medium" src="assets/content/call-of-the-wild-process-5.png" srcset="assets/content/call-of-the-wild-process-5.png 1x, assets/content/call-of-the-wild-process-5@2x.png 2x" style="margin-top:20px">
-            <img class="flex-item centre-image-medium" src="assets/content/call-of-the-wild-process-6.png" srcset="assets/content/call-of-the-wild-process-6.png 1x, assets/content/call-of-the-wild-process-6@2x.png 2x" style="margin-top:20px">
-            <img class="flex-item centre-image-large" src="assets/content/call-of-the-wild-process-7.png" srcset="assets/content/call-of-the-wild-process-7.png 1x, assets/content/call-of-the-wild-process-7@2x.png 2x" style="margin-top:20px">
-            <img class="flex-item centre-image-large" src="assets/content/call-of-the-wild-process-8.png" srcset="assets/content/call-of-the-wild-process-8.png 1x, assets/content/call-of-the-wild-process-8@2x.png 2x" style="margin-top:20px">
+            <img class="flex-item centre-image-medium wow fade-in-up" src="assets/content/call-of-the-wild-process-4.png" srcset="assets/content/call-of-the-wild-process-4.png 1x, assets/content/call-of-the-wild-process-4@2x.png 2x" style="margin-top:20px">
+            <img class="flex-item centre-image-medium wow fade-in-up" src="assets/content/call-of-the-wild-process-5.png" srcset="assets/content/call-of-the-wild-process-5.png 1x, assets/content/call-of-the-wild-process-5@2x.png 2x" style="margin-top:20px">
+            <img class="flex-item centre-image-medium wow fade-in-up" src="assets/content/call-of-the-wild-process-6.png" srcset="assets/content/call-of-the-wild-process-6.png 1x, assets/content/call-of-the-wild-process-6@2x.png 2x" style="margin-top:20px">
+            <img class="flex-item centre-image-large wow fade-in-up" src="assets/content/call-of-the-wild-process-7.png" srcset="assets/content/call-of-the-wild-process-7.png 1x, assets/content/call-of-the-wild-process-7@2x.png 2x" style="margin-top:20px">
+            <img class="flex-item centre-image-large wow fade-in-up" src="assets/content/call-of-the-wild-process-8.png" srcset="assets/content/call-of-the-wild-process-8.png 1x, assets/content/call-of-the-wild-process-8@2x.png 2x" style="margin-top:20px">
             <div class="flex-item back-to-top" style="margin-top:100px">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151.42 110.71">
                     <defs><style>.cls-2{fill:none;stroke:#37160a;stroke-linecap:round;stroke-linejoin:round;stroke-width:10px;}</style></defs><title>scroll-up</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline class="cls-2" points="146.42 75.71 75.71 5 5 75.71"/><polyline class="cls-2" points="146.42 105.71 75.71 35 5 105.71"/></g></g>
@@ -183,21 +192,20 @@
                 <p style="color:#37160a">Back to Top</p>
             </div>
             <script>
-            $(document).ready(function() {
-                $('.back-to-top').click(function() {
-                    $('html, body').animate({
-                        scrollTop: $('#call-of-the-wild-title').offset().top
-                    }, 1000)
-                })
-            });
+                $(document).ready(function() {
+                    $('.back-to-top').click(function() {
+                        $('html, body').animate({
+                            scrollTop: $('#call-of-the-wild-title').offset().top
+                        }, 1000)
+                    })
+                });
             </script>
         </div>
     </div>
     <div id="footer">
         <p style="color:#37160a">
             This website was hand-coded by myself from start to finish :&rpar;
-            <br>
-            Thanks for checking it out!
+            <br> Thanks for checking it out!
         </p>
     </div>
 
