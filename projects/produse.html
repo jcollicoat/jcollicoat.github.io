@@ -13,15 +13,23 @@
     <link rel="stylesheet" href="../resetmeyer.css" />
     <link rel="stylesheet" href="../normalize.css" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../animations.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../wow.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 
 </head>
 
 <body style="background-color:#333333">
-    
+
+    <script>
+        new WOW({
+            offset: 100,
+        }, ).init();
+    </script>
+
     <div class="flex-container project-page">
         <div class="flex-container" id="project-nav">
             <h2><a href="../index.html">Work</a></h2>
@@ -36,9 +44,10 @@
             <h2><a href="../contact.html">Contact</a></h2>
         </div>
         <div class="flex-container project-title" id="produse-title">
-            <div class="title-text">
+            <div class="title-text wow fade-in">
                 <h1>Produse</h1>
-                <p>The Produse app was designed to help users track their water consumption while purchasing supermarket goods. Through scanning barcodes of goods a user is buying the app will track water consumption on a shopping list and monthly scale, and suggest more eco-friendly alternative products.</p>
+                <p>The Produse app was designed to help users track their water consumption while purchasing supermarket goods. Through scanning barcodes of goods a user is buying the app will track water consumption on a shopping list and monthly scale,
+                    and suggest more eco-friendly alternative products.</p>
                 <div class="flex-container scroll-buttons">
                     <a class="flex-item scroll-button" id="scroll-project">
                         <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151.42 80.71">
@@ -54,75 +63,76 @@
                     </a>
                 </div>
                 <script>
-                $(document).ready(function() {
-                    $('#scroll-project').click(function() {
-                        $('html, body').animate({
-                            scrollTop: $('#produse-1').offset().top
-                        }, 1000)
-                    }),
-                    $('#scroll-process').click(function() {
-                        $('html, body').animate({
-                            scrollTop: $('#produse-5').offset().top
-                        }, 1500)
-                    })
-                });
-
+                    $(document).ready(function() {
+                        $('#scroll-project').click(function() {
+                                $('html, body').animate({
+                                    scrollTop: $('#produse-1').offset().top
+                                }, 1000)
+                            }),
+                            $('#scroll-process').click(function() {
+                                $('html, body').animate({
+                                    scrollTop: $('#produse-5').offset().top
+                                }, 1500)
+                            })
+                    });
                 </script>
             </div>
         </div>
         <div class="flex-container project-content content-1" id="produse-1">
-            <img class="flex-item centre-image-small" src="assets/content/produse-1.png" srcset="assets/content/produse-1.png 1x, assets/content/produse-1@2x.png 2x">
-            <div class="flex-item centre-text">
+            <img class="flex-item centre-image-small wow fade-in-up" src="assets/content/produse-1.png" srcset="assets/content/produse-1.png 1x, assets/content/produse-1@2x.png 2x">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Logo</h5>
                 <p>The logo for Produse comes from the water molecule H<sub>2</sub>O. The mechanic of two atoms orbiting a central object is carried through the app.</p>
             </div>
         </div>
         <div class="flex-container project-content content-1" id="produse-2">
-            <img class="flex-item centre-image-large" src="assets/content/produse-2.png" srcset="assets/content/produse-2.png 1x, assets/content/produse-2@2x.png 2x">
-            <div class="flex-item centre-text">
+            <img class="flex-item centre-image-large wow fade-in-up" src="assets/content/produse-2.png" srcset="assets/content/produse-2.png 1x, assets/content/produse-2@2x.png 2x">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Organise</h5>
                 <p>Users can either get stuck in to Produse right away, or create an account and keep track of shopping lists, monthly usage and more.</p>
             </div>
         </div>
         <div class="flex-container project-content content-1" id="produse-3">
-            <img class="flex-item centre-image-medium" src="assets/content/produse-3.png" srcset="assets/content/produse-3.png 1x, assets/content/produse-3@2x.png 2x">
-            <div class="flex-item centre-text">
+            <img class="flex-item centre-image-medium wow fade-in-up" src="assets/content/produse-3.png" srcset="assets/content/produse-3.png 1x, assets/content/produse-3@2x.png 2x">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Scan and Shop</h5>
-                <p>Users can scan supermarket item barcodes to get information on products, including most importantly the water usage of the selected item’s production, plus some information about the manufacturer. Alongside this, there are alternate products shown which are more water efficient.</p>
+                <p>Users can scan supermarket item barcodes to get information on products, including most importantly the water usage of the selected item’s production, plus some information about the manufacturer. Alongside this, there are alternate products
+                    shown which are more water efficient.</p>
             </div>
         </div>
         <div class="flex-container project-content content-1" id="produse-4">
-            <img class="flex-item centre-image-medium" src="assets/content/produse-4.png" srcset="assets/content/produse-4.png 1x, assets/content/produse-4@2x.png 2x">
-            <div class="flex-item centre-text">
+            <img class="flex-item centre-image-medium wow fade-in-up" src="assets/content/produse-4.png" srcset="assets/content/produse-4.png 1x, assets/content/produse-4@2x.png 2x">
+            <div class="flex-item centre-text wow fade-in-up">
                 <h5>Keep Track</h5>
-                <p>Users can keep a track of their ongoing water use and compare to previous weeks and months. Plus, there's a breakdown of usage in the form of historical shopping lists, and a nice little difference in use after buying more eco-friendly products!</p>
+                <p>Users can keep a track of their ongoing water use and compare to previous weeks and months. Plus, there's a breakdown of usage in the form of historical shopping lists, and a nice little difference in use after buying more eco-friendly
+                    products!</p>
             </div>
-            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/268375295?loop=1&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:5%;left:2.5%;right:2.5%;width:95%;height:95%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+            <div class="wow fade-in-up" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/268375295?loop=1&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:5%;left:2.5%;right:2.5%;width:95%;height:95%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
             <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
         <div class="flex-container project-content content-1" id="produse-5">
-            <div class="flex-item centre-text">
+            <div class="flex-item centre-text wow fade-in-up">
                 <p2 style="color:#aaaaaa">Process work for Produse.</p2>
             </div>
             <div class="flex-container content-4">
-                <img class="flex-item process-image" src="assets/content/produse-process-1.png" srcset="assets/content/produse-process-1.png 1x, assets/content/produse-process-1@2x.png 2x">
-                <div class="flex-item process-text">
+                <img class="flex-item process-image wow fade-in-up" src="assets/content/produse-process-1.png" srcset="assets/content/produse-process-1.png 1x, assets/content/produse-process-1@2x.png 2x">
+                <div class="flex-item process-text wow fade-in-up">
                     <h5>Initial Branding</h5>
                     <p>Produse's logo was initially different and went through various iterations, although still based on the same idea.</p>
                 </div>
             </div>
             <div class="flex-container content-4">
                 <div class="flex-container inverted-content">
-                    <img class="flex-item process-image" src="assets/content/produse-process-2.png" srcset="assets/content/produse-process-2.png 1x, assets/content/produse-process-2@2x.png 2x">
-                    <div class="flex-item process-text">
+                    <img class="flex-item process-image wow fade-in-up" src="assets/content/produse-process-2.png" srcset="assets/content/produse-process-2.png 1x, assets/content/produse-process-2@2x.png 2x">
+                    <div class="flex-item process-text wow fade-in-up">
                         <h5>Style Decisions</h5>
                         <p>Following the logo, I made an early presentation of Produse's visual style, including colour, typography, and icons.</p>
                     </div>
                 </div>
             </div>
             <div class="flex-container content-4">
-                <img class="flex-item process-image" src="assets/content/produse-process-3.png" srcset="assets/content/produse-process-3.png 1x, assets/content/produse-process-3@2x.png 2x">
-                <div class="flex-item process-text">
+                <img class="flex-item process-image wow fade-in-up" src="assets/content/produse-process-3.png" srcset="assets/content/produse-process-3.png 1x, assets/content/produse-process-3@2x.png 2x">
+                <div class="flex-item process-text wow fade-in-up">
                     <h5>Wireframing</h5>
                     <p>After the branding set-up, I completed some wireframes for an early presentation, to show the flow and functionality of Produse.</p>
                 </div>
@@ -134,21 +144,20 @@
                 <p>Back to Top</p>
             </div>
             <script>
-            $(document).ready(function() {
-                $('.back-to-top').click(function() {
-                    $('html, body').animate({
-                        scrollTop: $('#produse-title').offset().top
-                    }, 1000)
-                })
-            });
+                $(document).ready(function() {
+                    $('.back-to-top').click(function() {
+                        $('html, body').animate({
+                            scrollTop: $('#produse-title').offset().top
+                        }, 1000)
+                    })
+                });
             </script>
         </div>
     </div>
     <div id="footer">
         <p style="color:#ffffff">
             This website was hand-coded by myself from start to finish :&rpar;
-            <br>
-            Thanks for checking it out!
+            <br> Thanks for checking it out!
         </p>
     </div>
 

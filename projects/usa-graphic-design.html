@@ -13,14 +13,22 @@
     <link rel="stylesheet" href="../resetmeyer.css" />
     <link rel="stylesheet" href="../normalize.css" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../animations.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../wow.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 
 </head>
 
 <body style="background-color:#eeeeee">
+
+    <script>
+        new WOW({
+            offset: 100,
+        }, ).init();
+    </script>
 
     <div class="flex-container project-page">
         <div class="flex-container" id="project-nav">
@@ -36,7 +44,7 @@
             <h2><a style="color:#dd4127" href="../contact.html">Contact</a></h2>
         </div>
         <div class="flex-container project-title" id="usa-graphic-design-title">
-            <div class="title-text">
+            <div class="title-text wow fade-in">
                 <img id="usa-flag" src="assets/interactive/usa-graphic-design/usa_flag.svg">
                 <h1>USA Graphic Design</h1>
                 <p>Use the interface below to explore the finances of studying and working in graphic design across the United States of America! Compare options as a way of planning tertiary study and making informed decisions. Coded entirely with D3.js.<i> Works best on desktop.</i></p>
