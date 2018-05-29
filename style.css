@@ -3,7 +3,7 @@
 body {
     width: 100%;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #222222;
     font-size: 62.5%;
     min-width: 320px;
     max-width: 100%;
@@ -27,10 +27,23 @@ body {
 
 #nav {
     margin: 0 auto;
-    width: 45%;
-    height: 200px;
+    width: 75%;
+    height: 100px;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#nav-left {
+    height: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 2;
+}
+
+#nav-right {
+    height: 100px;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -55,9 +68,10 @@ body {
     width: auto;
     height: 50%;
     min-height: 50%;
+    padding: 0 50px;
 }
 
-#project-nav #logo path {
+#logo path {
     stroke: #ffffff;
 }
 
@@ -121,102 +135,72 @@ img {
 
 /*     Home Page     */
 
+#hero {
+    width: 75%;
+    margin: 150px auto;
+}
+
 #projects {
+    width: 75%;
     flex-wrap: wrap;
-    padding: 5px;
     justify-content: center;
+    margin: 0 auto;
 }
 
 #projects a {
-    width: 45%;
-    height: 22.5%;
-    margin: 5px;
+    width: 48%;
+    height: 24%;
+    margin: 30px 1%;
     text-decoration: none;
 }
 
 .project {
     width: 100%;
     height: 0;
-    padding-top: 2.5%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    padding-bottom: 47.5%;
+    padding-bottom: 50%;
+    border-radius: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: right;
-    box-sizing: border-box;
+    box-shadow: 0 5px 20px #101010;
+    transition: 0.75s ease;
 }
 
-.project:hover h3 {
-    opacity: 1;
-}
-
-.project:hover h4 {
-    opacity: 1;
+#projects a:hover .project {
+    transform: translate(0, -10px);
+    box-shadow: 0 15px 20px #101010;
+    transition: 0.75s ease;
 }
 
 #interstellar-identity {
     background-image: url(projects/assets/thumbnails/interstellar-identity.png);
 }
 
-#interstellar-identity:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/interstellar-identity.png);
-}
-
 #produse {
     background-image: url(projects/assets/thumbnails/produse.png);
-}
-
-#produse:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/produse.png);
 }
 
 #spotify-redesign {
     background-image: url(projects/assets/thumbnails/spotify-redesign.png);
 }
 
-#spotify-redesign:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/spotify-redesign.png);
-}
-
 #call-of-the-wild {
     background-image: url(projects/assets/thumbnails/call-of-the-wild.png);
-}
-
-#call-of-the-wild:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/call-of-the-wild.png);
 }
 
 #iconography {
     background-image: url(projects/assets/thumbnails/iconography.png);
 }
 
-#iconography:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/iconography.png);
-}
-
 #usa-graphic-design {
     background-image: url(projects/assets/thumbnails/usa-graphic-design.png);
-}
-
-#usa-graphic-design:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/usa-graphic-design.png);
 }
 
 #running-wgtn {
     background-image: url(projects/assets/thumbnails/running-wgtn.png);
 }
 
-#running-wgtn:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/running-wgtn.png);
-}
-
 #chico-state-alumni {
     background-image: url(projects/assets/thumbnails/chico-state-alumni.png);
-}
-
-#chico-state-alumni:hover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0) 50%), url(projects/assets/thumbnails/chico-state-alumni.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
@@ -582,12 +566,12 @@ h1 {
 }
 
 h2 a {
-    font-family: "HKGrotesk-Bold", sans-serif;
-    font-size: 2.2em;
-    font-weight: 700;
-    color: #000000;
+    font-family: "Varela Round", sans-serif;
+    font-size: 1.4em;
+    color: #ffffff;
+    opacity: 0.5;
     text-decoration: none;
-    padding: 5px 5px;
+    padding: 0 50px;
 }
 
 #project-nav h2 a {
@@ -595,7 +579,8 @@ h2 a {
 }
 
 h2 a:hover {
-    text-decoration: underline;
+    opacity: 1;
+    transition: opacity 0.25s ease;
 }
 
 h3 {
@@ -603,9 +588,7 @@ h3 {
     font-size: 2.8em;
     font-weight: 700;
     color: #ffffff;
-    opacity: 0;
-    text-shadow: 0 0 10px #000000;
-    transition: 0.2s ease;
+    margin: 20px auto 0 20px;
 }
 
 h4 {
@@ -614,9 +597,8 @@ h4 {
     font-weight: 400;
     margin-top: 5px;
     color: #ffffff;
-    opacity: 0;
-    text-shadow: 0 0 5px #000000;
-    transition: 0.2s ease;
+    opacity: 0.5;
+    margin: 5px auto 0 20px;
 }
 
 h5 {
@@ -625,13 +607,14 @@ h5 {
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 10px;
+    line-height: 1.2em;
 }
 
 p {
     font-family: "Varela Round", sans-serif;
     font-size: 1.6em;
     font-weight: 400;
-    color: #000000;
+    color: #ffffff;
     line-height: 1.6em;
 }
 
