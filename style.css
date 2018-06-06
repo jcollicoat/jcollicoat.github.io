@@ -8,8 +8,8 @@ body {
     min-width: 320px;
     max-width: 100%;
     overflow-x: hidden;
+    transition: 0.5s ease;
 }
-
 
 /*     Flex     */
 
@@ -22,71 +22,10 @@ body {
     min-height: 1px;
 }
 
-
-/*     Navigation     */
-
-#nav {
-    margin: 0 auto;
-    width: 75%;
-    height: 100px;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-#nav-left {
-    height: 100px;
-    justify-content: flex-start;
-    align-items: center;
-    flex-grow: 2;
-}
-
-#nav-right {
-    height: 100px;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-#nav-right a {
-    display: block;
-    text-decoration: none;
-    color: #ffffff;
-    margin: 0 10px;
-    opacity: 0.3;
-    padding: 2px;
-}
-
-#nav-right a:hover {
-    opacity: 0.99;
-    transition: 0.5s ease;
-}
-
-#nav-right .jam {
-    font-size: 26px;
-}
-
-#project-nav {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    width: 40%;
-    height: 100px;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-}
-
-
 /*     Logo + Animation     */
 
 #logo {
-    width: auto;
-    height: 50%;
-    min-height: 50%;
-    padding: 0 50px;
+    padding: 0 50px 0 0;
 }
 
 #logo path {
@@ -102,66 +41,126 @@ body {
     stroke-dashoffset: 267px;
     -webkit-animation: dash 3s cubic-bezier(0.5, 0, 0, 1) forwards;
     animation: dash 3s cubic-bezier(0.5, 0, 0, 1) forwards;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
 }
 
 @keyframes dash {
     from {
         stroke-dashoffset: 267px;
+        -webkit-stroke-dashoffset: 267px;
     }
     to {
         stroke-dashoffset: 0px;
+        -webkit-stroke-dashoffset: 0px;
     }
 }
 
-/*   IE and EDGE Fixes   */
+/*     Navigation     */
 
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-    #logo-anim {
-        stroke-dashoffset: 0px;
-    }
-    @keyframes dash {
-        from {
-            stroke-dashoffset: 0px;
-        }
-        to {
-            stroke-dashoffset: 0px;
-        }
-    }
+#nav-container {
+    height: 200px;
+    margin-bottom: -100px;
+    z-index: 2;
 }
 
-@supports (-ms-ime-align: auto) {
-    #logo-anim {
-        stroke-dashoffset: 0px;
-    }
-    @keyframes dash {
-        from {
-            stroke-dashoffset: 0px;
-        }
-        to {
-            stroke-dashoffset: 0px;
-        }
-    }
+#nav {
+    margin: 0 auto;
+    width: 75%;
+    height: 100px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-img {
-    -ms-interpolation-mode: bicubic;
+#nav-left {
+    height: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
 }
 
+#nav-right {
+    height: 100px;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}
 
-/*     Home Page     */
+#nav-right a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+    opacity: 0.5;
+    padding: 2px;
+}
 
-#hero {
-    width: 90%;
-    margin: 150px auto;
+#nav-right a:hover {
+    opacity: 0.99;
+    transition: 0.5s ease;
+}
+
+#nav-right .jam {
+    font-size: 26px;
+}
+
+/*   Footer   */
+
+#footer {
+    width: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 100px auto 50px auto;
+    text-align: center;
+}
+
+#social-icons {
+    width: 30%;
+    height: 50px;
+    margin: 100px auto 10px auto;
+    text-align: center;
+    justify-content: space-around;
+    display: none;
+}
+
+#social-icons a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+    opacity: 0.5;
+    padding: 2px;
+}
+
+#social-icons a:hover {
+    opacity: 0.99;
+    transition: 0.5s ease;
+}
+
+#social-icons .jam {
+    font-size: 26px;
+}
+
+/*     Heroes     */
+
+.hero {
+    width: 100vw;
+    margin: 0 auto 150px auto;
 }
 
 #hero-text {
     width: 50%;
-    margin: 0 30% 0 20%;
+    margin: 150px 30% auto 20%;
+    opacity: 0.99;
 }
+
+#hero-text h5, h6, p {
+    margin-bottom: 50px;
+}
+
+/*     Home Page     */
 
 #projects {
     width: 80%;
@@ -175,6 +174,7 @@ img {
     height: 24%;
     margin: 30px 1%;
     text-decoration: none;
+    transition: 0.5s ease;
 }
 
 .project {
@@ -184,6 +184,7 @@ img {
     border-radius: 10px;
     background-repeat: no-repeat;
     background-size: cover;
+    transform: translate(0, 0);
     box-shadow: 0 5px 20px #181818;
     transition: 0.5s ease;
 }
@@ -191,6 +192,11 @@ img {
 #projects a:hover .project {
     transform: translate(0, -10px);
     box-shadow: 0 15px 30px #181818;
+    transition: 0.5s ease;
+}
+
+#projects a:active .project {
+    transform: translate(0, 10px);
     transition: 0.5s ease;
 }
 
@@ -253,185 +259,59 @@ img {
     }
 }
 
-
-/*   Footer   */
-
-#footer {
-    width: 50%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 100px auto 50px auto;
-    text-align: center;
-}
-
-#social-icons {
-    width: 30%;
-    height: 50px;
-    margin: 100px auto 10px auto;
-    text-align: center;
-    justify-content: space-around;
-    display: none;
-}
-
-#social-icons a {
-    display: block;
-    text-decoration: none;
-    color: #ffffff;
-    margin: 0 10px;
-    opacity: 0.3;
-    padding: 2px;
-}
-
-#social-icons a:hover {
-    opacity: 0.99;
-    transition: 0.5s ease;
-}
-
-#social-icons .jam {
-    font-size: 26px;
-}
-
-
 /*     Projects     */
 
 .project-page {
     flex-direction: column;
 }
 
-.project-page p {
-    color: #ffffff;
-}
-
-.project-title {
-    width: 100%;
-    height: 49.5vw;
-    min-height: 500px;
+.project-hero {
+    width: 100vw;
+    height: calc(49.5vw - 100px);
+    margin: 0px auto 150px auto;
+    padding-top: 100px;
+    transform: translate(0, -100px);
     background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.title-text {
-    width: 50%;
-    margin: 10vw auto;
-    text-align: center;
-}
-
-.scroll-buttons {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 30%;
-    margin: 5% auto;
-    cursor: pointer;
-    text-align: center;
-}
-
-.scroll-button {
-    display: block;
-    width: 25%;
-    align-self: flex-end;
-    text-align: center;
-}
-
-.scroll-icon {
-    display: block;
-    margin: 10% auto;
-}
-
-.back-to-top {
-    width: 20%;
-    height: auto;
-    margin: 0 auto;
-    cursor: pointer;
-    text-align: center;
-}
-
-.back-to-top > svg {
-    width: 20%;
-    margin: 5% 0;
-}
-
-#interstellar-identity-title {
-    background-image: url(projects/assets/titles/interstellar-identity.png);
     background-size: 100%;
-    text-shadow: 0 0 10px #000000;
+    background-clip: padding-box;
+    overflow: hidden;
 }
 
-#produse-title {
-    background-image: url(projects/assets/titles/produse.png);
-    background-size: 100%;
+#interstellar-identity-hero {
+    background-image: url(projects/assets/hero-images/interstellar-identity.png);
 }
 
-#spotify-redesign-title {
-    background-image: url(projects/assets/titles/spotify-redesign.png);
-    background-size: 100%;
-    text-shadow: 0 0 10px #222222;
+#produse-hero {
+    background-image: url(projects/assets/hero-images/produse.png);
 }
 
-#call-of-the-wild-title {
-    background-image: url(projects/assets/titles/call-of-the-wild.png);
-    background-size: 100%;
-    text-shadow: 0 0 10px #000000;
-    min-width: 1000px;
-    position: absolute;
-    z-index: -1;
+#spotify-redesign-hero {
+    background-image: url(projects/assets/hero-images/spotify-redesign.png);
 }
 
-#iconography-title {
-    height: 40vw;
+#call-of-the-wild-hero {
+    background-image: url(projects/assets/hero-images/call-of-the-wild.png);
 }
 
-#iconography-title h1,
-#iconography-title p {
-    color: #000000;
-}
-
-#usa-graphic-design-title {
-    height: 35vw;
-}
-
-#usa-flag {
-    width: auto;
-    height: 100px;
-    margin: 0 auto -50px auto;
-}
-
-#usa-graphic-design-title h1,
-#usa-graphic-design-title p {
-    color: #dd4127;
-}
-
-#running-wgtn-title {
-    background-image: url(projects/assets/titles/running-wgtn.png);
-    background-size: 100%;
-    text-shadow: 0 0 10px #000000;
-}
-
-#chico-state-alumni-title {
-    height: 25vw;
-    min-height: 400px;
-}
-
-#chico-state-alumni-title h1,
-#chico-state-alumni-title p {
-    color: #222222;
+#running-wgtn-hero {
+    background-image: url(projects/assets/hero-images/running-wgtn.png);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    #interstellar-identity-title {
-        background-image: url(projects/assets/titles/interstellar-identity@2x.png);
+    #interstellar-identity-hero {
+        background-image: url(projects/assets/hero-images/interstellar-identity@2x.png);
     }
-    #produse-title {
-        background-image: url(projects/assets/titles/produse@2x.png);
+    #produse-hero {
+        background-image: url(projects/assets/hero-images/produse@2x.png);
     }
-    #call-of-the-wild-title {
-        background-image: url(projects/assets/titles/call-of-the-wild@2x.png);
+    #call-of-the-wild-hero {
+        background-image: url(projects/assets/hero-images/call-of-the-wild@2x.png);
     }
-    #spotify-redesign-title {
-        background-image: url(projects/assets/titles/spotify-redesign@2x.png);
+    #spotify-redesign-hero {
+        background-image: url(projects/assets/hero-images/spotify-redesign@2x.png);
     }
-    #running-wgtn-title {
-        background-image: url(projects/assets/titles/running-wgtn@2x.png);
+    #running-wgtn-hero {
+        background-image: url(projects/assets/hero-images/running-wgtn@2x.png);
     }
 }
 
@@ -509,12 +389,6 @@ img {
     margin: auto;
 }
 
-.centre-text {
-    width: 40%;
-    margin: 25px auto;
-    text-align: center;
-}
-
 .small-image {
     width: 30%;
     height: 30%;
@@ -527,13 +401,18 @@ img {
     margin: 20px auto;
 }
 
+.centre-text {
+    width: 40%;
+    margin: 25px auto;
+    text-align: center;
+}
+
 .small-text {
     width: 90%;
     margin: 30px auto;
 }
 
-.process-image,
-.process-text {
+.process-image, .process-text {
     width: 45%;
     margin: 0 1%;
 }
@@ -544,51 +423,32 @@ img {
     align-items: center;
 }
 
-#running-wgtn-1 {
-    background: linear-gradient(-10deg, #e64f25 0%, #e64f25 65%, #2c3288 65%, #2c3288 100%);
+.back-to-top {
+    height: auto;
+    display: block;
+    margin: 100px auto 0 auto;
+    cursor: pointer;
+    text-align: center;
 }
 
-#running-wgtn-2 {
-    background: linear-gradient(to bottom, #e64f25 0%, #e64f25 5%, #d81d40 40%);
+.back-to-top span {
+    font-size: 2em;
 }
 
-#running-wgtn-3 {
-    background: linear-gradient(10deg, #3c9f48 0%, #3c9f48 65%, #d81d40 65%, #d81d40 100%);
+.back-to-top a {
+    text-decoration: none !important;
 }
 
-#running-wgtn-4 {
-    background: linear-gradient(to bottom, #3c9f48 0%, #3c9f48 5%, #94692d 40%);
+.back-to-top a:hover {
+    text-decoration: none !important;
 }
-
-#running-wgtn-5 {
-    background: linear-gradient(-10deg, #2c3288 0%, #2c3288 55%, #94692d 55%, #94692d 100%);
-}
-
-#chico-state-alumni-1 {
-    height: 80vh;
-    min-height: 700px;
-}
-
-#usa-graphic-design-1 {
-    height: 1100px;
-}
-
-
-/*     Contact     */
-
-#contact {
-    width: 60%;
-    margin: 150px auto auto auto;
-}
-
 
 /*     Type     */
 
 @font-face {
     font-family: "HKGrotesk-Regular";
     src: url("assets/type/HKGrotesk-Regular.eot");
-    src: url("assets/type/HKGrotesk-Regular.woff"),
-    url("assets/type/HKGrotesk-Regular.woff2");
+    src: url("assets/type/HKGrotesk-Regular.woff"), url("assets/type/HKGrotesk-Regular.woff2");
     font-weight: normal;
     font-style: normal;
 }
@@ -596,8 +456,7 @@ img {
 @font-face {
     font-family: "HKGrotesk-Bold";
     src: url("assets/type/HKGrotesk-Bold.eot");
-    src: url("assets/type/HKGrotesk-Bold.woff"),
-    url("assets/type/HKGrotesk-Bold.woff2");
+    src: url("assets/type/HKGrotesk-Bold.woff"), url("assets/type/HKGrotesk-Bold.woff2");
     font-weight: bold;
     font-style: normal;
 }
@@ -611,7 +470,7 @@ h1 {
 }
 
 h1 a {
-    opacity: 0.3;
+    opacity: 0.5;
     transition: 0.5s ease;
 }
 
@@ -628,7 +487,7 @@ h2 {
 }
 
 h2 a {
-    opacity: 0.3;
+    opacity: 0.5;
     transition: 0.5s ease;
 }
 
@@ -653,7 +512,7 @@ h4 {
     line-height: 1.6em;
     margin-top: 5px;
     color: #ffffff;
-    opacity: 0.3;
+    opacity: 0.5;
     margin: 5px auto 0 20px;
 }
 
@@ -662,18 +521,30 @@ h5 {
     font-size: 3.5em;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 50px;
-    line-height: 1.2em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
 }
 
 h5 a {
-    opacity: 0.3;
+    opacity: 0.5;
     transition: 0.5s ease;
+    white-space: nowrap;
 }
 
 h5 a:hover {
     opacity: 0.99;
     transition: 0.5s ease;
+}
+
+h5 .jam {
+    font-size: 0.9em;
+}
+
+h6 {
+    font-family: "HKGrotesk-Bold", sans-serif;
+    font-size: 2em;
+    color: #ffffff;
+    line-height: 1.4em;
 }
 
 p {
@@ -685,7 +556,7 @@ p {
 }
 
 p a {
-    opacity: 0.3;
+    opacity: 0.5;
     transition: 0.5s ease;
 }
 
@@ -701,7 +572,7 @@ p2 {
     font-weight: 400;
     color: #ffffff;
     line-height: 1.6em;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 a {
@@ -716,29 +587,31 @@ i {
 
 ::-moz-selection {
     color: #ffffff;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 ::selection {
     color: #ffffff;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.5);
 }
-
 
 /*     Responsive     */
 
 @media screen and (max-width: 1400px) {
-
     /*   Home Page   */
     #projects {
         width: 85%;
     }
-
+    /*   Heroes   */
+    #hero-text {
+        width: 60%;
+        margin: 100px 25% auto 15%;
+    }
     /*   Project Content   */
     .centre-image-medium {
         width: 55%;
     }
-    .centre-image-small{
+    .centre-image-small {
         width: 40%;
     }
     .centre-text {
@@ -747,20 +620,27 @@ i {
 }
 
 @media screen and (max-width: 1200px) {
-
     /*   Navigation   */
     #nav {
         width: 85%;
     }
-
-    /*   Titles   */
-    #hero-text {
-        width: 70%;
-        margin: 0 20% 0 10%;
+    /*   Heroes   */
+    h1 {
+        font-size: 5em;
     }
-
-    /*   Home Page   */
-
+    h5 {
+        font-size: 3em;
+    }
+    h6 {
+        font-size: 1.8em;
+    }
+    .hero, .project-hero {
+        margin-bottom: 75px;
+    }
+    #hero-text {
+        width: 60%;
+        margin: 75px 25% auto 15%;
+    }
     /*   Project Content   */
     .centre-image-large {
         width: 75%;
@@ -777,15 +657,17 @@ i {
 }
 
 @media screen and (max-width: 1000px) {
-
     /*   Navigation   */
+    #nav-container {
+        height: 150px;
+        margin-bottom: -50px;
+    }
     #nav-right {
         display: none;
     }
     #logo, h2 {
         padding: 0 30px;
     }
-
     /*   Footer   */
     #footer {
         margin-top: 0;
@@ -793,7 +675,19 @@ i {
     #social-icons {
         display: flex;
     }
-
+    /*   Heroes   */
+    .hero {
+        margin-bottom: 40px;
+    }
+    .project-hero {
+        height: 500px;
+        padding-right: calc(1000px - 100vw);
+        margin-right: calc((1000px - 100vw) * -1);
+        margin-bottom: 40px;
+    }
+    #hero-text {
+        margin: 40px 25% auto 15%;
+    }
     /*   Home Page   */
     #projects {
         width: 75%;
@@ -802,18 +696,6 @@ i {
         width: 100%;
         height: 50%;
     }
-
-    /*   Project Titles   */
-    .title-text {
-        width: 70%;
-    }
-    #chico-state-alumni-title {
-        min-height: 250px;
-    }
-    .scroll-buttons {
-        width: 40%;
-    }
-
     /*   Project Content   */
     .centre-image-large {
         width: 80%;
@@ -839,34 +721,36 @@ i {
         margin: 10px auto 5% auto;
         text-align: center;
     }
-    .back-to-top > svg {
-        width: 30%;
-    }
-
-    /*   Contact   */
-    #about-me {
-        width: 70%;
-    }
 }
 
 @media screen and (max-width: 760px) {
-
     /*   Navigation   */
+    #nav-container {
+        height: 120px;
+        margin-bottom: -30px;
+    }
     #logo, h2 {
         padding: 0 20px;
     }
-
-    /*   Titles   */
+    /*   Heroes   */
+    .hero, .project-hero {
+        margin-bottom: 0;
+    }
     #hero-text {
         width: 80%;
         margin: 0 auto;
     }
-
+    h5 {
+        font-size: 2.5em;
+    }
+    h6 {
+        font-size: 1.6em;
+        margin-bottom: 30px;
+    }
     /*   Home Page   */
     #projects {
         width: 85%;
     }
-
     /*   Project Content   */
     .centre-image-large {
         width: 85%;
@@ -889,34 +773,29 @@ i {
         margin: 10px auto 5% auto;
         text-align: center;
     }
-    .back-to-top > svg {
-        width: 40%;
-    }
-
-    /*   Contact   */
-    #about-me {
-        width: 80%;
-    }
 }
 
 @media screen and (max-width: 480px) {
-
     /*   Navigation   */
     h2:nth-of-type(3) {
         display: none;
     }
-
+    /*   Footer   */
+    #footer {
+        width: 95%;
+    }
+    /*   Heroes   */
+    h1 {
+        font-size: 4em;
+    }
+    h5 {
+        line-height: 1.5em;
+    }
     /*   Home Page   */
     #hero-text {
         width: 90%;
         margin: 0 auto;
     }
-
-    /*   Footer   */
-    #footer {
-        width: 95%;
-    }
-
     /*   Project Content   */
     .centre-image-large {
         width: 95%;
@@ -945,16 +824,7 @@ i {
     .back-to-top {
         width: 30%;
     }
-
-    /*   Contact   */
-    #contact {
-        margin: 20vw auto;
-    }
-    #about-me {
-        width: 90%;
-    }
 }
-
 
 /*     Hide Desktop Projects on Mobile & Small Screens     */
 
@@ -971,8 +841,41 @@ i {
 }
 
 @media screen and (hover: none) {
-    #chico-state-alumni-link,
-    #usa-graphic-design-link {
+    #chico-state-alumni-link, #usa-graphic-design-link {
         display: none;
     }
+}
+
+/*   IE and EDGE Fixes   */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #logo-anim {
+        stroke-dashoffset: 0px;
+    }
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 0px;
+        }
+        to {
+            stroke-dashoffset: 0px;
+        }
+    }
+}
+
+@supports (-ms-ime-align: auto) {
+    #logo-anim {
+        stroke-dashoffset: 0px;
+    }
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 0px;
+        }
+        to {
+            stroke-dashoffset: 0px;
+        }
+    }
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
 }
