@@ -681,8 +681,9 @@ i {
     }
     .project-hero {
         height: 500px;
-        padding-right: calc(1000px - 100vw);
-        margin-right: calc((1000px - 100vw) * -1);
+        background-size: 1000px;
+        margin-left: calc(-500px + 50vw);
+        padding-left: calc(500px - 50vw);
         margin-bottom: 40px;
     }
     #hero-text {
